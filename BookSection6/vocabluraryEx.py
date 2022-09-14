@@ -6,9 +6,9 @@
 #     'age': 22,
 #     'city': 'Kyiv'
 # }
-# # for name in friend:
-# #     print(name)
-# # print(friend)
+# for key, value in friend.items():
+#     print(key)
+#     print(value)
 
 # 6-2
 

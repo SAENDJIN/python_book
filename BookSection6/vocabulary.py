@@ -33,19 +33,19 @@
 
 # ------------------------------------------
 
-alien_4 = {'x_position': 0, 'y_position': 25, 'speed': 'medium'}
-print(f"Original position: {alien_4['x_position']}, {alien_4['y_position']}")
-
-if alien_4['speed'] == 'slow':
-    x_increment = 1
-elif alien_4['speed'] == 'medium':
-    x_increment = 2
-else:
-    x_increment = 3
-
-alien_4['x_position'] = alien_4['x_position'] + x_increment
-
-print(f"New position: {alien_4['x_position']}, {alien_4['y_position']}")
+# alien_4 = {'x_position': 0, 'y_position': 25, 'speed': 'medium'}
+# print(f"Original position: {alien_4['x_position']}, {alien_4['y_position']}")
+#
+# if alien_4['speed'] == 'slow':
+#     x_increment = 1
+# elif alien_4['speed'] == 'medium':
+#     x_increment = 2
+# else:
+#     x_increment = 3
+#
+# alien_4['x_position'] = alien_4['x_position'] + x_increment
+#
+# print(f"New position: {alien_4['x_position']}, {alien_4['y_position']}")
 
 # ---------------------------------------------
 

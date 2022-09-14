@@ -6,8 +6,9 @@
 #     'age': 22,
 #     'city': 'Kyiv'
 # }
-#
-# print(friend)
+# # for name in friend:
+# #     print(name)
+# # print(friend)
 
 # 6-2
 

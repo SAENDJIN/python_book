@@ -70,7 +70,7 @@ print(f'My first bought console was {firs_owned.title()}')
 print(consoles)
 consoles.remove('Xbox')
 print(consoles)
-'remove' - remove value by name (delete only one value, if u have more than one u should create cycle
+# 'remove' - remove value by name (delete only one value, if u have more than one u should create cycle
 piece_off_shit = 'Xbox'
 print(consoles)
 consoles.remove(piece_off_shit)

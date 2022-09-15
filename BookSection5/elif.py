@@ -9,6 +9,8 @@ elif age > 18:
     price =35
 print(f'Ticket price {price}')
 
+# ------------------------------
+
 requested_toppings = ['ananas', 'onion', 'mushrooms', 'pepperoni']
 
 if 'mushrooms' in requested_toppings:

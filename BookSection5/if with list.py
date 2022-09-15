@@ -9,8 +9,9 @@
 #         print(f'Adding {requested_topping}.')
 #
 # print(f'\nFinnished making your pizza')
-#
-#
+
+# ------------------------------
+
 # if requested_toppings:
 #     for requested_topping in requested_toppings:
 #         print(f'Adding {requested_topping}')
@@ -18,6 +19,7 @@
 # else:
 #     print('are u sure you want empty pizza?')
 
+# ------------------------------
 
 available_toppings = ['mushrooms', 'olives', 'red pepper',
                       'pepperoni', 'pineapple', 'extra cheese']

@@ -42,22 +42,22 @@
 
 # ------------------------------
 
-# favorite_language = {
-#     'Andrii': ['python', 'Java'],
-#     'Mykyta': ['C#', 'Java'],
-#     'Vlad': ['python', 'Java'],
-#     'Oksana': ['Java', 'JS'],
-#     'Veronika': ['Java', 'python'],
-#     'Lena': ['python'],
-# }
-#
-# for name, languages in favorite_language.items():
-#     if len(languages) > 1:
-#         print(f"{name}'s favorite language are:")
-#         for language in languages:
-#             print(f"\t{language.title()}")
-#     else:
-#         print(f"{name}'s favorite language is:\n\t{language.title()}")
+favorite_language = {
+    'Andrii': ['python', 'Java'],
+    'Mykyta': ['C#', 'Java'],
+    'Vlad': ['python', 'Java'],
+    'Oksana': ['Java', 'JS'],
+    'Veronika': ['Java', 'python'],
+    'Lena': ['python'],
+}
+
+for name, languages in favorite_language.items():
+    if len(languages) > 1:
+        print(f"{name}'s favorite language are:")
+        for language in languages:
+            print(f"\t{language.title()}")
+    else:
+        print(f"{name}'s favorite language is:\n\t{language.title()}")
 
 # ------------------------------
 

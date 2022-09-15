@@ -53,20 +53,20 @@
 
 # ------------------------------
 
-# favorite_language = {
-#     'Andrii': 'python',
-#     'Mykyta': 'C#',
-#     'Vlad': 'python',
-#     'Oksana': 'Java',
-#     'Veronika': 'Java',
-#     'Lena': 'python',
-# }
-#
-# for name in sorted(favorite_language.keys()):
-#     print(f"{name.title()}, thank you for takin the pull")
-#
-# for language in favorite_language.values():
-#     print(language.title())
+favorite_language = {
+    'Andrii': 'python',
+    'Mykyta': 'C#',
+    'Vlad': 'python',
+    'Oksana': 'Java',
+    'Veronika': 'Java',
+    'Lena': 'python',
+}
+
+for name in sorted(favorite_language.keys()):
+    print(f"{name.title()}, thank you for takin the pull")
+
+for language in favorite_language.values():
+    print(language.title())
 
 # ------------------------------
 

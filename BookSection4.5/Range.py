@@ -3,14 +3,16 @@
 # print(f'\n')
 # for value2 in range(5):
 #     print(value2)
-#
-#
+
+# ------------------------------
+
 # numbers = list(range(10))
 # print(numbers)
 #
 # parni_num = list(range(2, 20, 2)) # Берет каждое второе число, если указать 1 будет не парное число
 # print(parni_num)
 
+# ------------------------------
 
 # squares = []  # Степень чисел
 # for value3 in range(1, 11):

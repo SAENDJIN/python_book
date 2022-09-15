@@ -1,3 +1,5 @@
+# (3-2) + (3-3) + (3-4) + (3-5) + (3-6) + (3-7) +
+
 guests = ['Veronika', 'Mykita', 'Maria', 'Vlad', 'Sasha']
 
 print(f'Hello {guests[0]}, its your personal invitation to the festival of naked pussies!')

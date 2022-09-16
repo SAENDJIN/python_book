@@ -1,23 +1,23 @@
-# requested_toppings = ['mushroms', 'green pepper', 'extra cheese']
-# requested_toppings = []
-#
-#
-# for requested_topping in requested_toppings:
-#     if requested_topping == 'green pepper':
-#         print(f'Sorry green pepper is ended.')
-#     else:
-#         print(f'Adding {requested_topping}.')
-#
-# print(f'\nFinnished making your pizza')
+requested_toppings = ['mushroms', 'green pepper', 'extra cheese']
+requested_toppings = []
+
+
+for requested_topping in requested_toppings:
+    if requested_topping == 'green pepper':
+        print(f'Sorry green pepper is ended.')
+    else:
+        print(f'Adding {requested_topping}.')
+
+print(f'\nFinnished making your pizza')
 
 # ------------------------------
 
-# if requested_toppings:
-#     for requested_topping in requested_toppings:
-#         print(f'Adding {requested_topping}')
-#     print(f'\nFinnished making your pizza')
-# else:
-#     print('are u sure you want empty pizza?')
+if requested_toppings:
+    for requested_topping in requested_toppings:
+        print(f'Adding {requested_topping}')
+    print(f'\nFinnished making your pizza')
+else:
+    print('are u sure you want empty pizza?')
 
 # ------------------------------
 

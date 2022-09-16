@@ -1,39 +1,39 @@
-# message =input('tell me somethin, and I will repeat it back to you: ')
-# print(message)
+message =input('tell me somethin, and I will repeat it back to you: ')
+print(message)
 
 # ------------------------------
 
-# name = input('Please enter your name: ')
-# print(f"\nHello, {name}")
+name = input('Please enter your name: ')
+print(f"\nHello, {name}")
 
 # ------------------------------
 
-# prompt = 'If you tell us who you are, we can personalize he message you see'
-# prompt += '\nWhat is your first name: '
-#
-# name = input(prompt)
-# print(f'Hello, {name}!')
+prompt = 'If you tell us who you are, we can personalize he message you see'
+prompt += '\nWhat is your first name: '
+
+name = input(prompt)
+print(f'Hello, {name}!')
 
 # ------------------------------
 
-# age = input("How old are you? ")
-# age = int(age)
-# print(age)
+age = input("How old are you? ")
+age = int(age)
+print(age)
 
 # ------------------------------
 
-# height = input('How tall are you, in centimeters: ')
-# height = int(height)
-#
-# if height >= 160:
-#     print("You are tall enough to ride")
-# else:
-#     print("You are not tall enough to ride")
+height = input('How tall are you, in centimeters: ')
+height = int(height)
+
+if height >= 160:
+    print("You are tall enough to ride")
+else:
+    print("You are not tall enough to ride")
 
 # ------------------------------
 
-# num = 5 % 3
-# print(num)
+num = 5 % 3
+print(num)
 
 # ------------------------------
 

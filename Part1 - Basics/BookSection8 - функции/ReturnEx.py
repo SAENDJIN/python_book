@@ -9,6 +9,7 @@ def city_country(city, country):
 capital = city_country('Kyiv', 'Ukraine')
 print(capital)
 
+
 # 8-6 (Роблю ще бо не викупив)
 # (Функція про пк, де проц і відеокарта. Вивід це сетап...)
 
@@ -20,6 +21,7 @@ def pc_setup(gpu, cpu):
 
 pc = pc_setup('rtx 2070', 'ryzen 5 5600')
 print(pc)
+
 
 # 8-7
 
@@ -41,6 +43,7 @@ album3 = make_album('50 cent', 'candy', track=1)
 print(album1)
 print(album2)
 print(album3)
+
 
 # 8-8
 

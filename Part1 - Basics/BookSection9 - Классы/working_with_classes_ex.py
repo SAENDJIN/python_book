@@ -66,19 +66,19 @@ class User:
               f"User live in {self.city}, and user age is {self.age}")
 
     def greet_user(self):
-        """Виводить привітання дол користувача"""
+        """Виводить привітання для користувача"""
         print(f"Hello, {self.first_name} {self.last_name}!")
 
     def read_login_tries(self):
-        """"""
+        """Виводить кількість спроб на авторизацію"""
         print(f"All login tries count are: {self.login_attempts}")
 
     def increment_login_attempts(self):
-        """"""
+        """Додає кількість спроб авторизуватися"""
         self.login_attempts += 1
 
     def reset_login_attempts(self):
-        """"""
+        """Скидає кількість спроб авторизуватися"""
         self.login_attempts = 0
 
 

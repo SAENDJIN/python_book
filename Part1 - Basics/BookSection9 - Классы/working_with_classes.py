@@ -41,11 +41,11 @@ class Car:
 # my_new_car.update_odometer(223)
 # my_new_car.read_odometer()
 
-my_used_car = Car('subaru', 'impreza', 2007)
-print(my_used_car.get_descriptive_name())
-
-my_used_car.update_odometer(350_500)
-my_used_car.read_odometer()
-
-my_used_car.increment_odometer(0.1)
-my_used_car.read_odometer()
+# my_used_car = Car('subaru', 'impreza', 2007)
+# print(my_used_car.get_descriptive_name())
+#
+# my_used_car.update_odometer(350_500)
+# my_used_car.read_odometer()
+#
+# my_used_car.increment_odometer(0.1)
+# my_used_car.read_odometer()

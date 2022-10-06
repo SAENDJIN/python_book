@@ -63,11 +63,11 @@ first_user = User('Andrii', 'Saienko', 'Kyiv', 21)
 second_user = User('Mykyta', 'Kovalskyi', 'Kyiv', 22)
 third_user = User('Veronika', 'Pipnik', 'Kotsubinske', 19)
 
-first_user.describe_user()
-first_user.greet_user()
-
-second_user.describe_user()
-second_user.greet_user()
-
-third_user.describe_user()
-third_user.greet_user()
+# first_user.describe_user()
+# first_user.greet_user()
+#
+# second_user.describe_user()
+# second_user.greet_user()
+#
+# third_user.describe_user()
+# third_user.greet_user()

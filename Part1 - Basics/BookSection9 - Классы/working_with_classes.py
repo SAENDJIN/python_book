@@ -1,3 +1,6 @@
+"""Клас для моделювання автівки"""
+
+
 class Car:
     """Проста спроба змоделювати машину"""
 
@@ -33,7 +36,6 @@ class Car:
             print("You can't add a minus value")
         else:
             self.odometer_reading += miles
-
 
 # my_new_car = Car('audi', 'a4', 2019)
 # print(my_new_car.get_descriptive_name())

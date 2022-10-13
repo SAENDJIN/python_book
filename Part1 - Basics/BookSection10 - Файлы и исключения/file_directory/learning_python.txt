@@ -1,0 +1,10 @@
+In python you can data analysis and machine learning
+In python you can web development
+In python you can automation or scripting
+In python you can software testing and prototyping
+In python you can everyday tasks
+In python you can keep track of stock market or crypto prices
+In python you can send yourself a text reminder to carry an umbrella anytime it’s raining
+In python you can update your grocery shopping list
+In python you can renaming large batches of files
+In python you can converting text files to spreadsheets

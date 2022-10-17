@@ -46,9 +46,9 @@ list_of_Rostik = ["Special OPS", "Mythical Beast", "10k Deluxe Scratchcard", "12
                   "Spin Dizzy Pull Tab", "Spinlotto", "Spinlotto Scratch", "Sunken Treasure",
                   "Super Expanding Splashcard", "Super Graphics Upside Down Pull Tab", "Super Showball",
                   "The Everlasting Scratchcard", "The Incredible Baloon Machine", "The Link", "The Link Scratch",
-                  "Tutankhamun Pull Tab", "War Of Bets", "Wheel Of Fortune", "Cash Pool", "Crazy Donuts",  "Cubes",
-                  "Go Panda", "Mines", "Summer Scratch",  "1001 Spins", "7 & Hot Fruits", "Might of Zeus",
-                  "Wealth of Wisdom",  "20 Golden Coins", "30 Spicy Fruits", "30 Summer Bliss", "Ice Valley",
+                  "Tutankhamun Pull Tab", "War Of Bets", "Wheel Of Fortune", "Cash Pool", "Crazy Donuts", "Cubes",
+                  "Go Panda", "Mines", "Summer Scratch", "1001 Spins", "7 & Hot Fruits", "Might of Zeus",
+                  "Wealth of Wisdom", "20 Golden Coins", "30 Spicy Fruits", "30 Summer Bliss", "Ice Valley",
                   "Jacks or Better", "Joker Poker", "Keno Universe", "Knight's Heart", "Orient Story",
                   "Buffalo Power Megaways", "Divine Dragon: Hold and Win", "Hit the Gold! Hold and Win",
                   "Rich Diamonds: Hold and Win", "Sun of Egypt 2", "Lobby", "Craps", "Draw high low",
@@ -66,7 +66,7 @@ list_of_Rostik = ["Special OPS", "Mythical Beast", "10k Deluxe Scratchcard", "12
                   "Flying Pigs", "Keno", "Money Wheel", "Super Wheel", "Viking Runecraft Bingo", "Magnify Man",
                   "500 Juicy Fruits", "88 Bingo 88", "Bingo Soccer", "Fortune Craft", "Icy Fruits", "Just A Bingo",
                   "King of Jumping Scratch", "Lazy Monkey", "Master Of Gold", "Piggy Bank Scratch", "Shogun's Fortune",
-                  "Draw Hi-Lo", "Pirate 21", "Pontoon",  "Three Card Rummy", "Top Card Trumps",
+                  "Draw Hi-Lo", "Pirate 21", "Pontoon", "Three Card Rummy", "Top Card Trumps",
                   "Age of Gods Norse: Norse Legends", "Age of the Gods Norse: Book of Dwarves",
                   "Age of the Gods: Book of Oracle", "Age of the Gods: Spin a Win", "Atlantis Cash Collect",
                   "Casino Hold 'Em", "Space Hunters: Shoot for Cash", "Fan Tan", "Punto Banco", "Aztec Gold Mines",
@@ -80,3 +80,15 @@ list_of_Rostik = ["Special OPS", "Mythical Beast", "10k Deluxe Scratchcard", "12
                   "Zombie Chicken", "Balloon", "Cappadocia", "Cricket X", "JetX", "JetX3", "PlinkoX", "SpinX",
                   "Three Cards", "Darts 180", "FireFly Keno", "Keno Pop", "Tutan Keno", "Virtual Soccer",
                   "Sheriff's Justice", "Double Exposure", "Heads and Tails", "Heads and Tails XY", "Hi-Lo"]
+
+Ans = ['red', 'blue', 'green', 'white']  #
+Word = ['red', 'white']  #
+
+# Обычная разность(Множество из Ans не входящее в Word):
+# result = list(set(Ans) - set(Word))
+
+# список игр , которые есть во втором списке(ROSTIK) но нету у нас в бонус термзах (CASINO)
+result = list(set(list_of_Rostik) - set(list_at_casino))
+# result = list(set(list_at_casino) - set(list_of_Rostik))
+
+print(result)

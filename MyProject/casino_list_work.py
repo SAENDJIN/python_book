@@ -89,6 +89,6 @@ Word = ['red', 'white']  #
 
 # список игр , которые есть во втором списке(ROSTIK) но нету у нас в бонус термзах (CASINO)
 result = list(set(list_of_Rostik) - set(list_at_casino))
-# result = list(set(list_at_casino) - set(list_of_Rostik))
-
+for casino in result:
+    print(casino)
 print(result)

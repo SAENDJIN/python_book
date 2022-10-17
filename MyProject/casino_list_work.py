@@ -81,8 +81,8 @@ list_of_Rostik = ["Special OPS", "Mythical Beast", "10k Deluxe Scratchcard", "12
                   "Three Cards", "Darts 180", "FireFly Keno", "Keno Pop", "Tutan Keno", "Virtual Soccer",
                   "Sheriff's Justice", "Double Exposure", "Heads and Tails", "Heads and Tails XY", "Hi-Lo"]
 
-Ans = ['red', 'blue', 'green', 'white']  #
-Word = ['red', 'white']  #
+# Ans = ['red', 'blue', 'green', 'white']  #
+# Word = ['red', 'white']  #
 
 # Обычная разность(Множество из Ans не входящее в Word):
 # result = list(set(Ans) - set(Word))
@@ -91,4 +91,4 @@ Word = ['red', 'white']  #
 result = list(set(list_of_Rostik) - set(list_at_casino))
 for casino in result:
     print(casino)
-print(result)
+# print(result)

@@ -24,9 +24,35 @@
 
 # ------------------------------
 
-filename = 'alice.txt'
-try:
-    with open(filename, encoding='utf-8') as f:
-        content = f.read()
-except FileNotFoundError:
-    print(f"Sorry, I can't find {filename} to open it")
+# filename = 'file_directory/Alice.txt'
+# try:
+#     with open(filename, encoding='utf-8') as f:
+#         content = f.read()
+# except FileNotFoundError:
+#     print(f"Sorry, I can't find {filename} to open it")
+# else:
+#     # Рахує приблизну кількість слів у файлі
+#     words = content.split()
+#     num_words = len(words)
+#     print(f"The file {filename} has about {num_words} words")
+
+
+# ------------------------------
+
+def count_words(filename):
+    """Порахувати кількість слів у файлі"""
+    try:
+        with open(filename, encoding='utf-8') as f:
+            content = f.read()
+    except FileNotFoundError:
+        print(f"Sorry, I can't find {filename} to open it")
+    else:
+        words = content.split()
+        num_words = len(words)
+        print(f"The file {filename} has about {num_words} words")
+
+
+filenames = ['file_directory/Alice.txt', 'file_directory/LittleWomen.txt', 'file_directory/Moby-Dick.txt',
+             'file_directory/Siddhartha.txt']
+for filename in filenames:
+    count_words(filename)

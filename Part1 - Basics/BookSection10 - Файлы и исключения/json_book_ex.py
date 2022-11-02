@@ -73,7 +73,7 @@ def greet_user():
         username = get_new_username()
         print(f"We'll remember you when you come back, {username}!")
 
-
+#
 # def check_username():
 #     username = get_stored_username()
 #     if username:
@@ -89,3 +89,7 @@ def greet_user():
 
 
 greet_user()
+
+#
+# except json.de
+# try:coder.JSONDecodeError

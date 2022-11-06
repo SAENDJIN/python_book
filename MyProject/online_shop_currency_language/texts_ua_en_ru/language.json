@@ -1,0 +1,18 @@
+{
+ "ua" : {
+   "welcome message" : "Дякую за вибір мови",
+   "currency chosen" : "Тепер оберіть валюту"
+
+ },
+ "en" : {
+   "welcome message" : "Thank you for choosing the language",
+   "currency chosen" : "Now choose a currency"
+
+ },
+  "ru" : {
+   "welcome message" : "Спасибо за выбор языка",
+    "currency chosen" : "Теперь выберете валюту"
+
+
+ }
+}

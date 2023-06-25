@@ -6,6 +6,7 @@ with open('texts_ua_en_ru/language.json', encoding='utf-8') as lg:
 print(f"Welcome to our tech / game shop!")
 print(f"We propose you to choose language that most convenient to you.")
 
+
 # class Lang
 def choose_language():
     """Обирає при першому вході мову та валюту користувача"""
@@ -26,7 +27,11 @@ def choose_language():
         print("Sorry, we don't understand text. Choose language from next list.")
         choose_language()
 
+# def choose_currency():
+#     language =
 
-def choose_currency():
-    language =
-
+#  Сделать класс LangCurr где будет в селф язык и валюта
+#  Прокидывать вопрос с валютой и языком в одном вопросе
+#  Получать инфу пример site_conf = LangCurr('UA', 'UAH')
+#  Создаем функции пунктов меню в которые прокидываем site_conf
+#  При выборе n-фунционала выводить функции

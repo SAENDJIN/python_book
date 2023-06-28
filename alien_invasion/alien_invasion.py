@@ -30,14 +30,8 @@ class AlienInvasion:
         while True:
             self._check_events()
             self.ship.update()
-            self.bullets.update()
             self._update_screen()
-
-        # Позбавитись куль, що зникли
-            for bullet in self.bullets.copy():
-                if bullet.rect.bottom <= 0:
-                    self.bullets.remove(bullet)
-                print(len(self.bullets))
+            self._update_bullets()
 
     def _check_events(self):
         """Реагувати на натискання клавіш та події миші"""
@@ -76,6 +70,11 @@ class AlienInvasion:
     def _update_bullets(self):
         """Оновити позицію куль та позбавитись старих куль"""
         # Оновити позицію куль
+        self.bullets.update()
+        # Позбавитись куль, що зникли
+        for bullet in self.bullets.copy():
+            if bullet.rect.bottom <= 0:
+                self.bullets.remove(bullet)
 
 
     def _update_screen(self):

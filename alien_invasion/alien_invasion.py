@@ -82,6 +82,10 @@ class AlienInvasion:
             if bullet.rect.bottom <= 0:
                 self.bullets.remove(bullet)
 
+    #     Перевірити, чи котрась із куль не влучила у прибульця.
+    #     Якщо влучила, позбавитись кулі та прибульця.
+        collections = pygame.sprite.groupcollide(self.bullets, self.aliens, True, True)
+
     def _update_aliens(self):
         """"Перевірити, чи флот знаходиться на краю, тоді оновити позиції всіх прибульців флоту"""
         self._check_fleet_edges()

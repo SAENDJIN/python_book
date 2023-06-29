@@ -15,6 +15,12 @@ class Settings:
         self.bullet_colout = (250, 250, 250)
         self.bullet_allowed = 30
 
+        # Налаштування прибульця
+        self.alien_speed = 1.0
+        self.fleet_drop_speed = 10
+        # fleet_direction 1 означає напрямок руху праворуч; -1 --ліворуч
+        self.fleet_direction = 1
+
 
 
 

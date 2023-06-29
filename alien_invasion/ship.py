@@ -12,7 +12,7 @@ class Ship:
 
         # Завантажити зображення корабля та отримати його rect
         self.image = pygame.image.load('images/706026.bmp')
-        self.image_scale = pygame.transform.scale(self.image, (50, 50))
+        self.image_scale = pygame.transform.scale(self.image, (100, 100))
         self.rect = self.image_scale.get_rect()
         # Створювати кожен новий корабель внизу екрана, по центру
         self.rect.midbottom = self.screen_rect.midbottom

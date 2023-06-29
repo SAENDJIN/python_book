@@ -4,6 +4,8 @@ import pygame
 from settings import Settings
 from ship import Ship
 from bullet import Bullet
+from alien import Alien
+
 
 class AlienInvasion:
     """Загальний клас, що керує ресурсами та поведінкою гри"""
@@ -24,6 +26,9 @@ class AlienInvasion:
         self.bg_color = (230, 230, 230)
         self.ship = Ship(self)
         self.bullets = pygame.sprite.Group()
+        self.aliens = pygame.sprite.Group()
+
+        self._create_fleet()
 
     def run_game(self):
         """Розпочати головний цикл гри"""
@@ -76,15 +81,32 @@ class AlienInvasion:
             if bullet.rect.bottom <= 0:
                 self.bullets.remove(bullet)
 
-
     def _update_screen(self):
         """Оновити зображення на екрані та перемкнутися на новий екран"""
         self.screen.fill(self.settings.bg_color)
         self.ship.blitme()
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
+        self.aliens.draw(self.screen)
         # Показувати останній намальований екран.
         pygame.display.flip()
+
+    def _create_fleet(self):
+        """Створити флот прибульців"""
+        # Створити прибульців та визначити кількість прибульців у ряду
+        # Відстань між прибульцями дорівнює ширині одного прибульця
+        alien = Alien(self)
+        alien_width = alien.rect.width
+        available_space_x = self.settings.screen_width - (2 * alien_width)
+        number_aliens_x = available_space_x // (2 * alien_width)
+
+        # Створити перший ряд прибульців
+        for alien_number in range(number_aliens_x):
+            # Створити прибульця та поставити йогов ряд
+            alien = Alien(self)
+            alien.x = alien_width + 2 * alien_width * alien_number
+            alien.rect.x = alien.x
+            self.aliens.add(alien)
 
 
 if __name__ == '__main__':

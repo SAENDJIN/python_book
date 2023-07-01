@@ -17,12 +17,10 @@ class Settings:
 
         # Налаштування прибульця
         self.alien_speed = 1.0
-        self.fleet_drop_speed = 10
+        self.fleet_drop_speed = 100
         # fleet_direction 1 означає напрямок руху праворуч; -1 --ліворуч
         self.fleet_direction = 1
 
-
-
-
         # Налаштування корабля
         self.ship_speed = 5.5
+        self.ship_limit = 3

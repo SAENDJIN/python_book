@@ -12,7 +12,7 @@ class Button:
         self.width, self.height = 200, 50
         self.button_color = (207, 242, 126)
         self.text_color = (0, 0, 0)
-        self.font = pygame.font.SysFont(None, 48)
+        self.font = pygame.font.SysFont("Pixeloid Sans", 36)
 
         # Створити об'єкт кнопки та відцентрувати його.
         self.rect = pygame.Rect(0, 0, self.width, self.height)

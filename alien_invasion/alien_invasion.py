@@ -7,6 +7,7 @@ from bullet import Bullet
 from alien import Alien
 from time import sleep
 from game_stats import GameStats
+from button import Button
 
 
 class AlienInvasion:
@@ -35,6 +36,9 @@ class AlienInvasion:
 
         self._create_fleet()
 
+        # Створити кнопку
+        self.play_button = Button(self, "Play")
+
     def run_game(self):
         """Розпочати головний цикл гри"""
         while True:
@@ -50,6 +54,9 @@ class AlienInvasion:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                mouse_pos = pygame.mouse.get_pos()
+                self._check_play_button(mouse_pos)
             elif event.type == pygame.KEYDOWN:
                 self._check_keydown_events(event)
             elif event.type == pygame.KEYUP:
@@ -118,6 +125,10 @@ class AlienInvasion:
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
         self.aliens.draw(self.screen)
+
+        # Намалювати кнопку Play, якщо гра неактивна
+        if not self.stats.game_active:
+            self.play_button.draw_button()
         # Показувати останній намальований екран.
         pygame.display.flip()
 
@@ -180,6 +191,7 @@ class AlienInvasion:
             sleep(0.5)
         else:
             self.stats.game_active = False
+            pygame.mouse.set_visible(True)
 
     def _check_aliens_bottom(self):
         """"Перевірити, чи не досяг якийсь прибулець нижньої частини екрана"""
@@ -189,6 +201,25 @@ class AlienInvasion:
                 # Реагуємо так наче корабель пібито
                 self._ship_hit()
                 break
+
+    def _check_play_button(self, mouse_pos):
+        """Розпочати гру, коли гравець натисне кнопку Play"""
+        button_cliked = self.play_button.rect.collidepoint(mouse_pos)
+        if button_cliked and not self.stats.game_active:
+            # Аналювати ігрову статистику
+            self.stats.reset_stats()
+            self.stats.game_active = True
+
+            # Приховати курсор миші.
+            pygame.mouse.set_visible(False)
+
+        # Позбавитись надлишку прибульців та куль.
+        self.aliens.empty()
+        self.bullets.empty()
+
+        # Створити новий флот та відцентрувати корабель.
+        self._create_fleet()
+        self.ship.center_ship()
 
 
 if __name__ == '__main__':

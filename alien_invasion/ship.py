@@ -1,19 +1,20 @@
 import pygame
+from pygame.sprite import Sprite
 
-
-class Ship:
+class Ship(Sprite):
     """Клас для керування кораблем"""
 
     def __init__(self, ai_game):
-        """Ініціалізуємо корабель та задаємо йому початкову позицію"""
+        """Ініціалізуємо корабель та встановіть його вихідне положення"""
+        super().__init__()
         self.screen = ai_game.screen
         self.settings = ai_game.settings
         self.screen_rect = ai_game.screen.get_rect()
 
         # Завантажити зображення корабля та отримати його rect
         self.image = pygame.image.load('images/706026.bmp')
-        self.image_scale = pygame.transform.scale(self.image, (100, 100))
-        self.rect = self.image_scale.get_rect()
+        self.image = pygame.transform.scale(self.image, (100, 100))
+        self.rect = self.image.get_rect()
         # Створювати кожен новий корабель внизу екрана, по центру
         self.rect.midbottom = self.screen_rect.midbottom
 
@@ -35,7 +36,7 @@ class Ship:
 
     def blitme(self):
         """Намалювати корабель у його поточному розташуванні"""
-        self.screen.blit(self.image_scale, self.rect)
+        self.screen.blit(self.image, self.rect)
 
     def center_ship(self):
         """Відцентрувати корабель на екрані"""

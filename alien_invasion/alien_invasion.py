@@ -96,18 +96,27 @@ class AlienInvasion:
         for bullet in self.bullets.copy():
             if bullet.rect.bottom <= 0:
                 self.bullets.remove(bullet)
-        self._check_bullet_alien_collision()
+        self._check_bullet_alien_collisions()
 
-    def _check_bullet_alien_collision(self):
+    def _check_bullet_alien_collisions(self):
         """Реакція на зіткнення куль з прибульцями"""
         # Видалити всі кулі та прибульців, що зіткнулися
-        collections = pygame.sprite.groupcollide(self.bullets, self.aliens, True, True)
+        collisions = pygame.sprite.groupcollide(
+            self.bullets, self.aliens, True, True)
 
-        if not self.aliens:
-            # Знищити наявні кулі та створити новий флот
-            self.bullets.empty()
-            self._create_fleet()
-            self.settings.increase_speed()
+        if collisions:
+            for aliens in collisions.values():
+                self.stats.score += self.settings.alien_points * len(aliens)
+            self.sb.prep_score()
+            self.sb.check_high_score()
+            if not self.aliens:
+                self.bullets.empty()
+                self._create_fleet()
+                self.settings.increase_speed()
+
+                # Збільшити рівень
+                self.stats.level +=1
+                self.sb.prep_level()
 
     def _update_aliens(self):
         """"Перевірити, чи флот знаходиться на краю, тоді оновити позиції всіх прибульців флоту"""
@@ -183,8 +192,9 @@ class AlienInvasion:
     def _ship_hit(self):
         """Реагувати на зіткнення прибульця з кораблем"""
         if self.stats.ships_left > 0:
-            # Зменшити ships_left
+            # Зменшити ships_left та оновити табло.
             self.stats.ships_left -= 1
+            self.sb.prep_ships()
 
             # Позбавити надлишку прибульців та куль.
             self.aliens.empty()
@@ -214,19 +224,23 @@ class AlienInvasion:
         if button_cliked and not self.stats.game_active:
             # Аналювати ігрову статистику
             self.settings.initialize_dynamic_settings()
+
             self.stats.reset_stats()
+            self.sb.prep_score()
+            self.sb.prep_level()
+            self.sb.prep_ships()
             self.stats.game_active = True
 
             # Приховати курсор миші.
             pygame.mouse.set_visible(False)
 
-        # Позбавитись надлишку прибульців та куль.
-        self.aliens.empty()
-        self.bullets.empty()
+            # Позбавитись надлишку прибульців та куль.
+            self.aliens.empty()
+            self.bullets.empty()
 
-        # Створити новий флот та відцентрувати корабель.
-        self._create_fleet()
-        self.ship.center_ship()
+            # Створити новий флот та відцентрувати корабель.
+            self._create_fleet()
+            self.ship.center_ship()
 
 
 if __name__ == '__main__':

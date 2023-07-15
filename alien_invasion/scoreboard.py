@@ -47,11 +47,11 @@ class Scoreboard:
         """Згенерувати рекорд зображення"""
         high_score = round(self.stats.high_score, -1)
         high_score_str = "{:,}".format(high_score)
-        self.high_score_image = self.font.render(high_score_str, True, self.text_color, self.settings.bg_color)
+        self.high_score_image = self.font.render('High Score: ' + high_score_str, True, self.text_color, self.settings.bg_color)
 
         # Відцентрувати рекорд по горизонталі
         self.high_score_rect = self.high_score_image.get_rect()
-        self.high_score_rect.centerx = self.score_rect.centerx
+        self.high_score_rect.centerx += 1000
         self.high_score_rect.top = self.score_rect.top
 
     def check_high_score(self):
@@ -73,6 +73,7 @@ class Scoreboard:
     def prep_ships(self):
         """Показує, скільки лишилось кораблів"""
         self.ships = Group()
+
         for ship_number in range(self.stats.ships_left):
             ship = Ship(self.ai_game)
             ship.rect.x = 10 + ship_number * ship.rect.width
